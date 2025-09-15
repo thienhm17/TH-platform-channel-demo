@@ -1,17 +1,12 @@
-# th_platform_channel_demo
 
-A new Flutter project.
+# TH Platform Channel Demo
 
-## Getting Started
+An MVP to demonstrate communication between Flutter and iOS Native code.
 
-This project is a starting point for a Flutter application.
+## Data Flow
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# TH-platform-channel-demo
+1. **Flutter UI** receives an event from the user (e.g., tapping the Sync button).
+2. Flutter calls the iOS native code using a platform channel.
+3. The iOS native code processes the request using HealthKit to collect health data (e.g., step count).
+4. The native code returns the collected data to Flutter via the platform channel.
+5. Flutter displays the data in the UI.
